@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Totally Normal Page</title>
+<style>
+  body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20%;
+    transition: background 0.2s;
+  }
+
+  #scary {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #scary img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+</head>
+<body>
+  <h1>Welcome to this relaxing page...</h1>
+  <p>Just breathe in, breathe out... everything is calm.</p>
+
+  <div id="scary">
+    <img src="C:\Users\chirag dangi\Desktop\html activity\jumpscare.gif" alt="Scary face">
+  </div>
+
+  <audio id="scream" src="https://www.myinstants.com/media/sounds/movie_1.mp3"></audio>
+
+  <script>
+    setTimeout(() => {
+      document.body.style.background = "black";
+      document.querySelector("h1").style.display = "none";
+      document.querySelector("p").style.display = "none";
+      document.getElementById("scary").style.display = "flex";
+      document.getElementById("scream").play();
+    }, 5000); // 5 seconds delay
+  </script>
+</body>
+</html>
